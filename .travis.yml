@@ -62,6 +62,8 @@ jobs:
       dist: trusty
 
 matrix:
+  exclude:
+    - php: default
   allow_failures:
     - php: nightly
     - php: hhvm
