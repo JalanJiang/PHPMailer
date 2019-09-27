@@ -1,6 +1,13 @@
 language: php
 
-php: "5.6"
+php:
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - '7.2'
+  - '7.4snapshot'
+  - nightly
+  - hhvm
 
 cache:
   directories:
@@ -52,16 +59,16 @@ jobs:
       php: 5.6
       env: CS_CHECK=1
     - stage: test
-    - php: 5.6
-    - php: 7.0
-    - php: 7.1
-    - php: 7.2
+#    - php: 5.6
+#    - php: 7.0
+#    - php: 7.1
+#    - php: 7.2
     - php: 7.3
       env: CODE_COVERAGE=1
-    - php: 7.4snapshot
-    - php: nightly
-    - php: hhvm
-      dist: trusty
+#    - php: 7.4snapshot
+#    - php: nightly
+#    - php: hhvm
+#      dist: trusty
 
 matrix:
   exclude:
